@@ -1,0 +1,28 @@
+.card-box {
+  margin-left: 2vw;
+  margin-bottom: 2vh;
+  position: relative;
+}
+
+.card-img { 
+  height: 35vh;
+  max-width: 35vw;
+  max-height: 35vh;
+}
+
+.card-group {
+  position: relative;
+  bottom: 0;
+}
+
+.card-buttons {
+  margin-right: 1vw;
+}
+
+.card-span {
+  justify-content: right;
+}
+
+.card-icon {
+  max-width: 3vw;
+}
