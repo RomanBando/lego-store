@@ -11,25 +11,15 @@ export default function ProductsPage() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    const result = async () => {
-      const resp = await api.get('/products');
-      // .then((response) => setProducts(response.data))
-      const data = await resp.json();
-      setProducts(data);
-    }
-    result()
-    // api.get('/products')
-    //   .then((response) => setProducts(response.data))
-    //   .catch((err) => {
-    //     console.log(err);
-    //   })
+    api.get('/products')
+      .then((response) => setProducts(response.data))
+      .catch((err) => {
+        console.log(err);
+      })
   }, []);
-
-  console.log('prods', products)
 
   return (
     <div>
-      <h1>{products[0].product_name}</h1>
       <div>
         <ProductsLine 
           products={products}
